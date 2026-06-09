@@ -200,19 +200,7 @@ npm run dev:web
 
 ## 常见问题
 
-**Q: 部署后访问显示空白页？**
 
-确认 `npm run build:web` 已执行且 `web/dist/` 目录存在。`wrangler deploy` 会自动上传该目录。
-
-**Q: 访问 `/api/*` 返回前端 404 页面？**
-
-确认 `wrangler.toml` 的 `[assets]` 配置包含：
-
-```toml
-run_worker_first = ["/api/*", "/file/*", "/u/*"]
-```
-
-否则 Cloudflare 静态资源层可能会先处理请求，并把不存在的 API 路径回退到 SPA 的 `index.html`，最终显示前端 404 页面，而不是进入 Worker API 路由。
 
 **Q: 数据库报错 "table not found"？**
 
