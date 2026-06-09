@@ -13,7 +13,7 @@ INSTANCE_NAME = "cfmemos"
 APP_VERSION = "1.0.0"
 
 [[d1_databases]]
-binding = "cfmemos_db"
+binding = "DB"
 database_name = "cfmemos-db"
 database_id = "43e76955-234d-4c5e-a82a-93801859c89f"
 
